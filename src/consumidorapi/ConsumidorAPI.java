@@ -40,8 +40,8 @@ public class ConsumidorAPI {
         try {
             HttpPost httpPost = new HttpPost(ConsumidorAPI.URLBase + "/Login/Autenticar?token=" + ConsumidorAPI.token);
 
-                // Criando um handler ou manipulando de resposta customizadp
-            // pois queremos recuperar o conteudo da resposta e nao apenas o codigo http de resposta
+                // Criando um handler ou manipulador de resposta customizado
+            // pois queremos recuperar o conteúdo da resposta e não apenas o código http de resposta
             ResponseHandler<String> responseHandler = new ResponseHandler<String>() {
                 @Override
                 public String handleResponse(
@@ -63,16 +63,16 @@ public class ConsumidorAPI {
         }
     }
 
-    // metodo para realizar requisiçôes para a API
-    //lembrando que o primeiro deve deve ser executado o0 metodo doLogin para realizara a autenticação
-    //este metodo recebe parte da URL que será executada, pois a URL Base já é um atributo estático desta classe
+    // método para realizar requisiçôes para a API
+    //lembrando que primeiro deve deve ser executado o método doLogin para realizar a autenticação
+    //este método recebe parte da URL que será executada, pois a URL Base já é um atributo estático desta classe
     public String doRequest(String path) {
         String responseBody = null;
         try {
             HttpGet httpGet = new HttpGet(ConsumidorAPI.URLBase+path);
 
             //criando um handler ou manipulador de resposta customizado
-            //pois querremos recuperar o conteúdo da respota e não apenas o código http de resposta
+            //pois queremos recuperar o conteúdo da respota e não apenas o código http de resposta
             ResponseHandler<String> responseHandler = new ResponseHandler<String>() {
                 @Override
                 public String handleResponse(
