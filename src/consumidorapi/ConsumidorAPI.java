@@ -18,7 +18,7 @@ import java.util.logging.Logger;
 public class ConsumidorAPI {
 
     private static String URLBase = "http://api.olhovivo.sptrans.com.br/v2.1/";
-    private static String token = "por favor, insera o token de acesso";
+    private static String token = "inserir token de acesso";
 
     private static ConsumidorAPI instance;
 
