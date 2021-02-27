@@ -41,7 +41,7 @@ public class ConsumidorAPI {
             HttpPost httpPost = new HttpPost(ConsumidorAPI.URLBase + "/Login/Autenticar?token=" + ConsumidorAPI.token);
 
                 // Criando um handler ou manipulador de resposta customizado
-            // pois queremos recuperar o conteúdo da resposta e não apenas o código http de resposta
+            // pois queremos recuperar o conteúdo de resposta e não apenas o código http de resposta
             ResponseHandler<String> responseHandler = new ResponseHandler<String>() {
                 @Override
                 public String handleResponse(
